@@ -31,7 +31,7 @@
     .btn-outline { background: #fff; color: var(--brand); border-color: var(--brand); box-shadow: none; }
     .btn-outline:hover { background: rgba(37,99,235,.06); }
     header { background: radial-gradient(1000px 600px at 20% 10%, var(--fg), var(--bg)); color: #fff; }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; gap: .75rem; }
     .brand { display: flex; align-items: center; gap: .75rem; font-weight: 800; letter-spacing: .4px; font-size: 1.05rem; }
     .phone { font-weight: 800; }
     .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; padding: 3.5rem 0 3rem; align-items: center; }
@@ -75,6 +75,8 @@
       .cards { grid-template-columns: 1fr; }
     }
   </style>
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -82,6 +84,7 @@
     "name": "On The Move – White Glove Services",
     "url": "https://example.com/",
     "telephone": "+1-267-478-2519",
+    "email": "nelsontrucking92@gmail.com",
     "description": "Professional junk removal, clean outs, and light demolition. Free estimate. Call now.",
     "areaServed": "Local service area",
     "priceRange": "$$",
@@ -110,15 +113,19 @@
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 13h18l-2 6H5l-2-6Zm0 0 2.5-7H21l-2 7M7 19v2m10-2v2" stroke="#93c5fd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         On The Move – White Glove Services
       </div>
-      <a class="btn" href="tel:2674782519" aria-label="Call 267-478-2519">Call: <span class="phone">267-478-2519</span></a>
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap; align-items:center">
+        <a class="btn" href="tel:2674782519" aria-label="Call 267-478-2519">Call: <span class="phone">267-478-2519</span></a>
+        <a class="btn btn-outline" href="mailto:nelsontrucking92@gmail.com?subject=Free%20Estimate%20Request" aria-label="Email nelsontrucking92@gmail.com">Email Us</a>
+      </div>
     </div>
 
     <div class="container hero">
       <div>
         <h1>Fast, Professional Junk Removal & Clean Outs</h1>
-        <p>Free estimate. Same‑day & next‑day availability. Friendly team. We handle the heavy lifting so you don’t have to.</p>
+        <p>Free estimate. Same-day & next-day availability. Friendly team. We handle the heavy lifting so you don’t have to.</p>
         <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:1rem">
           <a class="btn" href="tel:2674782519">Free Estimate – Call Now</a>
+          <a class="btn btn-outline" href="mailto:nelsontrucking92@gmail.com?subject=Free%20Estimate%20Request&body=Hi%2C%20I%27d%20like%20a%20quote%20for%3A%0A%0AName%3A%20%0APhone%3A%20%0AAddress%20(city%2Fzip)%3A%20%0ADetails%3A%20" aria-label="Email for a free estimate">Email Us</a>
           <a class="btn btn-outline" href="#contact">Request Quote Online</a>
         </div>
         <ul class="hero-list" aria-label="Top services">
@@ -140,10 +147,13 @@
           </div>
           <textarea name="details" rows="4" aria-label="Project details" placeholder="What needs to go? e.g., sofa + old fridge, garage cleanup, shed demo…" required></textarea>
           <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-            <a class="btn" href="tel:2674782519">Call 267‑478‑2519</a>
+            <a class="btn" href="tel:2674782519">Call 267-478-2519</a>
             <a class="btn btn-outline" href="#contact">Send Request</a>
           </div>
         </form>
+        <p class="muted" style="margin:.75rem 0 0">
+          Prefer email? <a href="mailto:nelsontrucking92@gmail.com?subject=Free%20Estimate%20Request">nelsontrucking92@gmail.com</a>
+        </p>
       </div>
     </div>
   </header>
@@ -154,15 +164,15 @@
       <p class="muted">Transparent pricing. Courteous crew. We leave your space swept clean.</p>
       <div class="cards" role="list">
         <div class="card" role="listitem"><h3>Junk Removal</h3><p class="muted">Single items to full loads—household, garage, attic, yard.</p></div>
-        <div class="card" role="listitem"><h3>Estate Clean Out</h3><p class="muted">Compassionate, discreet whole‑home clear‑outs.</p></div>
+        <div class="card" role="listitem"><h3>Estate Clean Out</h3><p class="muted">Compassionate, discreet whole-home clear-outs.</p></div>
         <div class="card" role="listitem"><h3>Appliance Removal</h3><p class="muted">Refrigerators, washers, dryers—properly hauled away.</p></div>
         <div class="card" role="listitem"><h3>Furniture Removal</h3><p class="muted">Couches, mattresses, dressers, office furniture.</p></div>
         <div class="card" role="listitem"><h3>Hoarder Clean Out</h3><p class="muted">Careful sorting, removal, and respectful service.</p></div>
-        <div class="card" role="listitem"><h3>Commercial Junk Removal</h3><p class="muted">Offices, retail, warehouses—one‑time or recurring.</p></div>
+        <div class="card" role="listitem"><h3>Commercial Junk Removal</h3><p class="muted">Offices, retail, warehouses—one-time or recurring.</p></div>
         <div class="card" role="listitem"><h3>Light Demolition</h3><p class="muted">Cabinets, carpet, small walls—demo & debris removal.</p></div>
-        <div class="card" role="listitem"><h3>Shed Removal</h3><p class="muted">Take‑down and haul‑away of small outbuildings.</p></div>
-        <div class="card" role="listitem"><h3>House Clean Out</h3><p class="muted">Move‑out, eviction, and pre‑sale clean‑ups.</p></div>
-        <div class="card" role="listitem"><h3>Hot Tub Removal</h3><p class="muted">Safe cut‑up and haul‑away of old spas.</p></div>
+        <div class="card" role="listitem"><h3>Shed Removal</h3><p class="muted">Take-down and haul-away of small outbuildings.</p></div>
+        <div class="card" role="listitem"><h3>House Clean Out</h3><p class="muted">Move-out, eviction, and pre-sale clean-ups.</p></div>
+        <div class="card" role="listitem"><h3>Hot Tub Removal</h3><p class="muted">Safe cut-up and haul-away of old spas.</p></div>
         <div class="card" role="listitem"><h3>Commercial Building</h3><p class="muted">Units, floors, or entire buildings cleared fast.</p></div>
         <div class="card" role="listitem"><h3>Brush & Debris Clean Out</h3><p class="muted">Yard waste, storm debris, and site cleanups.</p></div>
       </div>
@@ -172,9 +182,9 @@
       <div class="cta" role="region" aria-label="Free estimate">
         <div>
           <h2 style="margin:.2rem 0 .35rem">Free Estimate – Call Now</h2>
-          <p class="muted" style="margin:0">Up‑front pricing. No surprises. Most jobs completed same day.</p>
+          <p class="muted" style="margin:0">Up-front pricing. No surprises. Most jobs completed same day.</p>
         </div>
-        <a class="btn" href="tel:2674782519" aria-label="Call now for a free estimate">Call 267‑478‑2519</a>
+        <a class="btn" href="tel:2674782519" aria-label="Call now for a free estimate">Call 267-478-2519</a>
       </div>
     </section>
 
@@ -182,7 +192,7 @@
       <h2>How It Works</h2>
       <div class="process">
         <div class="step"><b>1</b><div><strong>Call or Request</strong><br><span class="muted">Tell us what you need removed.</span></div></div>
-        <div class="step"><b>2</b><div><strong>Free Estimate</strong><br><span class="muted">Clear, all‑in price before we start.</span></div></div>
+        <div class="step"><b>2</b><div><strong>Free Estimate</strong><br><span class="muted">Clear, all-in price before we start.</span></div></div>
         <div class="step"><b>3</b><div><strong>We Haul It</strong><br><span class="muted">Friendly team, careful in your home.</span></div></div>
         <div class="step"><b>4</b><div><strong>Swept Clean</strong><br><span class="muted">We tidy the space before we go.</span></div></div>
       </div>
@@ -194,14 +204,22 @@
       <div class="split">
         <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch shortly.');">
           <input name="name" placeholder="Sam" required />
-          <input name="email" type="email"nelsontrucking92@gmail.com"Email (optional)" />
+          <!-- fixed broken email input -->
+          <input name="email" type="email" placeholder="Email (optional)" />
           <input name="phone" inputmode="tel" placeholder="Phone (optional)" />
           <textarea name="message" rows="5" placeholder="What needs to go? Include photos if emailing/texting." required></textarea>
           <button class="btn" type="submit">Send Request</button>
+          <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.5rem">
+            <a class="btn btn-outline" href="mailto:nelsontrucking92@gmail.com?subject=Free%20Estimate%20Request&body=Hi%2C%20I%27d%20like%20a%20quote%20for%3A%0A%0AName%3A%20%0APhone%3A%20%0AAddress%20(city%2Fzip)%3A%20%0ADetails%3A%20">Email Us Instead</a>
+          </div>
         </form>
         <div class="card">
           <h3>Call or Text</h3>
-          <p style="font-size:1.2rem; font-weight:800; margin:.25rem 0 1rem;"><a href="tel:2674782519">267‑478‑2519</a></p>
+          <p style="font-size:1.2rem; font-weight:800; margin:.25rem 0 1rem;"><a href="tel:2674782519">267-478-2519</a></p>
+          <h3>Email</h3>
+          <p style="margin:.25rem 0 1rem;">
+            <a href="mailto:nelsontrucking92@gmail.com?subject=Free%20Estimate%20Request">nelsontrucking92@gmail.com</a>
+          </p>
           <p class="muted">Hours: Mon–Sat • 8am–6pm</p>
           <hr style="border:none; border-top:1px solid #e2e8f0; margin:1rem 0">
           <h3>Tips for a Fast Quote</h3>
@@ -218,7 +236,7 @@
   <footer>
     <div class="container" style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; align-items:center">
       <div>© <span id="year"></span> On The Move – White Glove Services. All rights reserved.</div>
-      <div><a href="#services">Services</a> • <a href="#process">How it Works</a> • <a href="#contact">Contact</a></div>
+      <div><a href="#services">Services</a> • <a href="#process">How it Works</a> • <a href="#contact">Contact</a> • <a href="mailto:nelsontrucking92@gmail.com">Email</a></div>
     </div>
   </footer>
 
@@ -227,4 +245,5 @@
   </script>
 </body>
 </html>
+
 
