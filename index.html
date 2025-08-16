@@ -68,7 +68,17 @@
   box-shadow: 0 10px 30px rgba(2,6,23,.35);
   border: 1px solid rgba(148,163,184,.25);
 }
+/* Darker intro line inside the white request card */
+.hero-card > p:first-of-type{
+  color:#334155;      /* slate-700 */
+  font-weight:600;    /* optional but helps readability */
+}
 
+/* If that paragraph has a "muted" or Bootstrap "text-muted" class */
+.hero-card .muted,
+.hero-card .text-muted{
+  color:#334155 !important;
+}
 /* Checklist */
 .hero-list{
   display: grid;
